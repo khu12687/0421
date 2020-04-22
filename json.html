@@ -1,0 +1,68 @@
+<script>
+/*
+JSON : JavaScript Object Notation 
+(1)무엇인가?
+    자바스크립트로 객체를 표현한 표기법
+(2)사용자 정의 클래스와 공통점 및 차이점
+    공통점 : 둘다 객체를 표현할 수 있다!!(즉 현실의 사물을 표현)
+    차이점 : 사용자 정의 객체는 변수와 함수를 모두 포함한다
+                하지만 JSON의 용도는 오직 데이터만을 전달하기 위함이므로 변수만 보유!!
+                클래스에 의한 사용자 정의 객체는 주로 로직을 처리하기 위한 용도이지만,
+                JSON은 로직은 없고 오직, 데이터만 보유하고있다. 
+*/
+
+//JSON 표기법
+// var dog={ //JSON 객체라고한다
+//     "name":"뽀삐",
+//     "age":9,
+//    " isPretty": true
+// } 
+// //위의 제이슨 객체의 age 변수에 접근하려면?
+// alert(dog.age);
+
+// //클래스
+// class Mario{ //거프집 생성
+//     constructor(age){
+//         this.age=age;
+//     }
+// }
+// var mario =new Mario(7); //인스턴스 생성
+// //위의 객체의 age변수에 접근하려면?
+// alert(mario.age);
+
+// //다음의 객체를 제이슨으로 표기해보자!!
+// //사원의 이름, 성별, 나이를 JSON으로 표현해보기
+// {
+//     "name":"Kim",
+//     "gender":"Male",
+//     "age":23
+// }
+//하얀색 5살 암컷 고양이와 호랑이, 사자를 가진 27세 철수라는 남자  JSON으로 표현해보기
+//원칙 : 제이슨이라할지라도 숫자, 문자, 논리값, 객체를 대상으로 데이터를 사용함에는 
+//         변함이없다!!
+var obj={
+    "name":"철수",
+    "gender":"male",
+    "age":27,
+    "pet":[
+        {
+            "color":"white",
+            "gender":"female",
+            "type":"cat"
+        },
+        {
+            "color":"white",
+            "gender":"female",
+            "type":"tiger"
+        },
+        {
+            "color":"white",
+            "gender":"female",
+            "type":"lion"
+        }
+    ]
+}
+//사자에 접근하려면?
+alert(obj.pet[2].type);
+
+</script>
